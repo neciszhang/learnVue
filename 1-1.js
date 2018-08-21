@@ -4,6 +4,15 @@ function observe(value,cb){
     })
 }
 
-function defineReactive(obj,key,value,cb){
-    
+function defineReactive(obj,key,val,cb){
+    Object.defineProperty(obj,key,{
+        enumerable:true,
+        configurable:true,
+        get:()=>{
+            return val;
+        },
+        set:newVal=>{
+
+        }
+    })
 }
